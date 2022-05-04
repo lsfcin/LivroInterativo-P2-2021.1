@@ -1,6 +1,6 @@
-## Getting Started
+## Livro Interativo
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Neste projeto temos uma estrutura que permite a contação/ narração de histórias com escolhas de caminhos feitas pelo leitor.
 
 ## Folder Structure
 
