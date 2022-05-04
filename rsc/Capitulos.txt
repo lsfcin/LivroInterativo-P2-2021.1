@@ -1,0 +1,147 @@
+CAPITULO_COM_IMAGEM
+ID
+Raiz
+PERSONAGENS
+Protagonista
+Antagonista
+TEXTO
+Protagonista
+ estava correndo pela floresta e se deparou com um penhasco. O que ela fará?
+VARIACOES
+-10
+0
+IMAGEM
+__________________
+|       __       |
+|     _(  )_     |
+|    (  )(  )    |
+|     ||  ||     |
+__________________
+IMAGEM_FIM
+
+CAPITULO
+ID
+Penhasco
+PERSONAGENS
+Protagonista
+Antagonista
+TEXTO
+Ao pular do penhasco ela acaba se sacrificando            
+VARIACOES
+-100
+0
+
+CAPITULO_COM_IMAGEM
+ID
+Lobos
+PERSONAGENS
+Protagonista
+Antagonista
+TEXTO
+Ao se esconder ela vê quatro lobos que estavam perseguindo ela. Claramente um deles é mais imponente, ela mentalmente apelida ele de 
+Antagonista
+. Aparentemente os lobos se perderem, e agora?
+VARIACOES
+0
+-15
+IMAGEM
+__________________________
+|        _               |
+|       / \      _-'     |
+|     _/|  \-''- _ /     |
+|__-' { |          \     |
+|    /             \     |
+|    /       "o.  |o }   |
+|    |            \ ;    |
+|                  ',    |
+|       \_         __\   |
+|         ''-_    \.//   |
+|           / '-____'    |
+|          /             |
+|        _'              |
+|      _-'               |
+__________________________
+IMAGEM_FIM
+
+CAPITULO
+ID
+Arvore
+PERSONAGENS
+Protagonista
+Antagonista
+TEXTO
+Enquanto sobe na árvore ela percebe que os lobos foram embora. Enfim a salvo!
+VARIACOES
+-10
+0
+
+CAPITULO
+ID
+Final Feliz
+PERSONAGENS
+Protagonista
+Antagonista
+TEXTO
+Ao correr na direção dos lobos, 
+Protagonista
+ percebe que 
+Antagonista
+ estava na verdade latindo para avisar de um penhasco logo a frente. 
+Protagonista
+ fica feliz em perceber o cuidado de 
+Antagonista
+ e assim ambos começam uma amizade bonita.
+VARIACOES
+100
+100
+
+ESCOLHA
+DE
+Raiz
+PARA
+Penhasco
+TEXTO DIGITADO
+pular
+TEXTO MOSTRADO
+Ela vai arriscar e [pular] no penhasco
+
+ESCOLHA
+DE
+Raiz
+PARA
+Lobos
+TEXTO DIGITADO
+árvore
+TEXTO MOSTRADO
+Ela vai encostar em uma [árvore] e tentar se esconder
+
+ESCOLHA
+DE
+Lobos
+PARA
+Arvore
+TEXTO DIGITADO
+Sobe
+TEXTO MOSTRADO
+[Sobe] numa árvore
+
+ESCOLHA
+DE
+Lobos
+PARA
+Final feliz
+TEXTO DIGITADO
+aproxima
+TEXTO MOSTRADO
+Se [aproxima] dos lobos
+
+ESCOLHA
+DE
+Lobos
+PARA
+Raiz
+TEXTO DIGITADO
+Volta
+TEXTO MOSTRADO
+[Volta] pro penhasco
+

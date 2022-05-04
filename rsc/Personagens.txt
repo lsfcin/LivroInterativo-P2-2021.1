@@ -1,0 +1,8 @@
+Protagonista
+Maria
+100
+
+Antagonista
+Alfa
+200
+
