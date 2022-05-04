@@ -2,7 +2,7 @@
 
 Neste projeto temos uma estrutura que permite a contação/ narração de histórias com escolhas de caminhos feitas pelo leitor.
 
-## Folder Structure
+## Estrutura de Pastas
 
 The workspace contains two folders by default, where:
 
