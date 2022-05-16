@@ -36,8 +36,7 @@ public class LeitorDeArquivos {
 
     public HashMap<String, Capitulo> carregarCapitulos(
             String caminho,
-            Map<String, Personagem> personagens,
-            Scanner escaneadorDoConsole) {
+            Map<String, Personagem> personagens) {
 
         HashMap<String, Capitulo> capitulos = new HashMap<String, Capitulo>();
 
@@ -56,11 +55,11 @@ public class LeitorDeArquivos {
 
                     if(linha.equals("CAPITULO")) 
                     {
-                        capitulos.put(id, new Capitulo(personagens, escaneadorDoConsole, escaneadorDoArquivo));
+                        capitulos.put(id, new Capitulo(personagens, escaneadorDoArquivo));
                     } 
                     else if(linha.equals("CAPITULO_COM_IMAGEM"))
                     {
-                        capitulos.put(id, new CapituloImagem(personagens, escaneadorDoConsole, escaneadorDoArquivo));
+                        capitulos.put(id, new CapituloImagem(personagens, escaneadorDoArquivo));
                     }
 
                     System.out.println("Capitulo " + id);
