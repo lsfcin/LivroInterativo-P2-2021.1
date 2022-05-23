@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
@@ -58,10 +59,22 @@ public class Controlador {
 
     public void mostrarEscolhas(ArrayList<Escolha> escolhas)
     {
-        botoesEscolha.setPadding(new Insets(10));
+        botoesEscolha.setPadding(new Insets(10));        
+        botoesEscolha.getButtons().clear();
 
-        for (int i = 0; i < escolhas.size(); i++) {
-            botoesEscolha.getButtons().add(new Button(escolhas.get(i).getTextoMostrado()));
+        for (int i = 0; i < escolhas.size(); i++) 
+        {            
+            BotaoEscolha botao = new BotaoEscolha(escolhas.get(i));
+            
+            botao.setOnAction(new EventHandler<ActionEvent>() 
+            {
+                @Override
+                public void handle(ActionEvent event) {
+                    mostrarCapitulo(botao.getEscolha().getProximo());
+                }
+            });
+
+            botoesEscolha.getButtons().add(botao);
         }
     }
 }
