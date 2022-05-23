@@ -2,6 +2,18 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
 
+/**
+ * Classe que armazena todas as informações relativas à um capítulo da história.
+ * As informações armezandas são:
+ * <ul>
+ * <li> private String texto;
+ * <li> protected ArrayList<Escolha> escolhas;
+ * <li> private Personagem personagem1;
+ * <li> private Personagem personagem2;
+ * <li> private int variacaoEnergiaPersonagem1;
+ * <li> private int variacaoEnergiaPersonagem2;
+ * </ul>
+ */
 public class Capitulo {
   private String texto;
   protected ArrayList<Escolha> escolhas;
