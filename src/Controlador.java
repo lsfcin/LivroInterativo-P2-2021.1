@@ -38,11 +38,11 @@ public class Controlador {
         mostrarCapitulo(raiz);
         
         botaoIniciar.setVisible(false);
-        //raiz.executar();
     }
 
     private void mostrarCapitulo(Capitulo capitulo)
     {
+        capitulo.atualizarEnergiaPersonagens();
         mostrarTextoCapitulo(capitulo.getTexto());
         mostrarEscolhas(capitulo.getEscolhas());
     }

@@ -26,12 +26,4 @@ public class CapituloImagem extends Capitulo {
             linha = escaneadorDoArquivo.nextLine();
         }
     }
-
-    // protected void mostrar() 
-    // {
-    //     System.out.println();
-    //     System.out.println(" . . . ");
-    //     System.out.println(this.imagem);
-    //     super.mostrar();
-    // }    
 }

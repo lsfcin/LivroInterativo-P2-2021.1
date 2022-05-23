@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
-import java.util.Objects;
 
 public class Capitulo {
     private String texto;
@@ -76,89 +75,17 @@ public class Capitulo {
         escolhas.add(escolha);
     }
 
-    // public void executar() {
-    //     // Mostrando o texto do capítulo e das escolhas
-    //     mostrar();
-
-    //     // Permitindo que o usuário realize sua escolha, caso existam escolhas possíveis
-    //     if (escolhas.size() > 0) {
-    //         int idCapituloEscolhido = escolher();
-    //         System.out.println();
-    //         System.out.println(". . .");
-    //         System.out.println();
-    //         escolhas.get(idCapituloEscolhido).getProximo().executar();
-    //     } else {
-    //         System.out.println("Sua aventura acabou, reinicie o livro para uma nova experiência!\n");
-    //     }
-    // }
-
-    // protected void mostrar() {
-    //     System.out.println(texto);
-    //     personagem1.ajustarEnergia(variacaoEnergiaPersonagem1);
-    //     personagem2.ajustarEnergia(variacaoEnergiaPersonagem2);
-
-    //     for (int i = 0; i < escolhas.size(); i++) {
-    //         System.out.println("- " + escolhas.get(i).getTextoMostrado());
-    //     }
-
-    //     System.out.print(">> ");
-    // }
-
-    // private int escolher() {
-    //     int opcaoEscolhida = 0;
-    //     String escolha;
-    //     boolean escolhaValida = false;
-
-    //     while (!escolhaValida) {
-    //         //escolha = escaneador.nextLine();
-    //         escolha = "";
-    //         for (int i = 0; i < escolhas.size(); i++) {
-    //             if (escolha.equalsIgnoreCase(escolhas.get(i).getTextoDigitado())) {
-    //                 escolhaValida = true;
-    //                 opcaoEscolhida = i;
-    //             }
-    //         }
-    //         if (!escolhaValida) {
-    //             System.out.println("A escolha digitada não válida, digite novamente");
-    //         }
-    //     }
-
-    //     return opcaoEscolhida;
-    // }
-
     int findMin(int a, int b, int c) {
         int min = Math.min(a, b);
         return Math.min(min, c);
     }
 
-    int calculateLevenshteinDistance(String a, String b) {
-        int aLimit = a.length() + 1;
-        int bLimit = b.length() + 1;
-        int[][] distance = new int[aLimit][];
-        for (int i = 0; i < aLimit; ++i) {
-            distance[i] = new int[bLimit];
-        }
-        for (int i = 0; i < aLimit; ++i) {
-            distance[i][0] = i;
-        }
-        for (int j = 0; j < bLimit; ++j) {
-            distance[0][j] = j;
-        }
-        for (int i = 1; i < aLimit; ++i) {
-            for (int j = 1; j < bLimit; ++j) {
-                char aChar = a.charAt(i - 1);
-                char bChar = b.charAt(j - 1);
-                distance[i][j] = findMin(
-                        distance[i - 1][j] + 1,
-                        distance[i][j - 1] + 1,
-                        distance[i - 1][j - 1] + (Objects.equals(aChar, bChar) ? 0 : 1) // + substitution cost
-                );
-            }
-        }
-        return distance[a.length()][b.length()];
-    }
-
     public ArrayList<Escolha> getEscolhas() {
         return escolhas;
+    }
+
+    public void atualizarEnergiaPersonagens() {
+        personagem1.ajustarEnergia(variacaoEnergiaPersonagem1);
+        personagem2.ajustarEnergia(variacaoEnergiaPersonagem2);
     };
 }
