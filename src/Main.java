@@ -12,11 +12,10 @@ public class Main extends Application {
     launch(args);
   }
 
-
   /**
-  * O método start sobrepõe o método da classe herdada,
-  * dentro deste método estamos carregando um arquivo FXML
-  */
+   * O método start sobrepõe o método da classe herdada,
+   * dentro deste método estamos carregando um arquivo FXML
+   */
 
   @Override
   public void start(Stage primaryStage) throws Exception {
