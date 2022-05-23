@@ -16,7 +16,8 @@ public class Personagem {
     if (variacao != 0) {
       setEnergia(this.energia + variacao);
       System.out.println(
-          "[Devido aos acontecimentos recentes, a energia de " + this.nome + " foi a " + this.energia + "]");
+          "[Devido aos acontecimentos recentes, a energia de " + 
+          this.nome + " foi a " + this.energia + "]");
     }
   }
 

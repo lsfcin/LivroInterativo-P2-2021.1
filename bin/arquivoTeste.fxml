@@ -40,27 +40,41 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador">
+<VBox prefHeight="800.0" 
+      prefWidth="800.0" 
+      xmlns="http://javafx.com/javafx/18" 
+      xmlns:fx="http://javafx.com/fxml/1" 
+      fx:controller="Controlador">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="494.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" 
+                prefHeight="494.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
       <children>
-        <TextArea fx:id="textoCapitulo" editable="false" layoutX="34.0" layoutY="84.0" prefHeight="238.0" prefWidth="733.0" text="..." wrapText="true">
+        <TextArea fx:id="textoCapitulo" editable="false" 
+                  layoutX="34.0" layoutY="84.0" prefHeight="238.0" prefWidth="733.0" 
+                  text="..." wrapText="true">
           <font>
             <Font name="Candara Light" size="20.0" />
           </font>
         </TextArea>
-        <Label layoutX="34.0" layoutY="32.0" prefHeight="36.0" prefWidth="245.0" text="A história da floresta">
+        <Label layoutX="34.0" layoutY="32.0" 
+                prefHeight="36.0" prefWidth="245.0" 
+                text="A história da floresta">
           <font>
             <Font name="Candara" size="25.0" />
           </font>
         </Label>
-        <TextArea fx:id="imagemAscii" editable="false" layoutX="34.0" layoutY="349.0" prefHeight="238.0" prefWidth="733.0" text="ASCII!" visible="false" wrapText="true">
+        <TextArea fx:id="imagemAscii" editable="false" 
+                  layoutX="34.0" layoutY="349.0" 
+                  prefHeight="238.0" prefWidth="733.0" 
+                  text="ASCII!" visible="false" wrapText="true">
           <font>
             <Font name="Consolas" size="12.0" />
           </font>
         </TextArea>
-        <ButtonBar fx:id="botoesEscolha" layoutX="34.0" layoutY="613.0" prefHeight="173.0" prefWidth="733.0" />
-        <Button fx:id="botaoIniciar" layoutX="697.0" layoutY="37.0" mnemonicParsing="false" onAction="#iniciarHistoria" text="Carregar">
+        <ButtonBar fx:id="botoesEscolha" layoutX="34.0" layoutY="613.0" 
+                   prefHeight="173.0" prefWidth="733.0" />
+        <Button fx:id="botaoIniciar" layoutX="697.0" layoutY="37.0" 
+                mnemonicParsing="false" onAction="#iniciarHistoria" text="Carregar">
           <font>
             <Font name="Candara" size="14.0" />
           </font>

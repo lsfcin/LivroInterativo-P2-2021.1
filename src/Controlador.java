@@ -29,8 +29,12 @@ public class Controlador {
   void iniciarHistoria(ActionEvent event) {
     LeitorDeArquivos leitor = new LeitorDeArquivos();
 
-    Map<String, Personagem> personagens = leitor.carregarPersonagens("rsc/Personagens.txt");
-    Map<String, Capitulo> capitulos = leitor.carregarCapitulos("rsc/Capitulos.txt", personagens);
+    Map<String, Personagem> personagens = 
+      leitor.carregarPersonagens("rsc/Personagens.txt");
+    
+    Map<String, Capitulo> capitulos = 
+      leitor.carregarCapitulos("rsc/Capitulos.txt", personagens);
+      
     System.out.println("Carregamento finalizado\n\n...\n\n");
 
     raiz = capitulos.get("raiz");
