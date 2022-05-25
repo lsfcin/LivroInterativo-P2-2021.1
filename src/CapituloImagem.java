@@ -13,6 +13,10 @@ public class CapituloImagem extends Capitulo {
     this.escolhas = new ArrayList<Escolha>();
   }
 
+  public String getImagem() {
+    return this.imagem;
+  }
+
   protected void lerCapitulo(Map<String, Personagem> personagens, Scanner escaneadorDoArquivo) {
     super.lerCapitulo(personagens, escaneadorDoArquivo);
 

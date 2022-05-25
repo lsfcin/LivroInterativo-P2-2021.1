@@ -38,15 +38,34 @@ public class Controlador {
     System.out.println("Carregamento finalizado\n\n...\n\n");
 
     raiz = capitulos.get("raiz");
-    mostrarCapitulo(raiz);
+
+    if(raiz instanceof CapituloImagem) {
+      mostrarCapitulo((CapituloImagem)raiz);
+    }
+    else if (raiz instanceof Capitulo) {
+      mostrarCapitulo(raiz);
+    }
 
     botaoIniciar.setVisible(false);
   }
 
   private void mostrarCapitulo(Capitulo capitulo) {
+    imagemAscii.setVisible(false);
     capitulo.atualizarEnergiaPersonagens();
     mostrarTextoCapitulo(capitulo.getTexto());
     mostrarEscolhas(capitulo.getEscolhas());
+  }
+
+  private void mostrarCapitulo(CapituloImagem capitulo) {
+    imagemAscii.setVisible(true);
+    capitulo.atualizarEnergiaPersonagens();
+    mostrarTextoCapitulo(capitulo.getTexto());
+    mostrarImagemCapitulo(capitulo.getImagem());
+    mostrarEscolhas(capitulo.getEscolhas());
+  }
+
+  private void mostrarImagemCapitulo(String imagem) {
+    imagemAscii.setText(imagem);
   }
 
   public void mostrarTextoCapitulo(String texto) {
@@ -67,7 +86,12 @@ public class Controlador {
       botao.setOnAction(new EventHandler<ActionEvent>() {
         @Override
         public void handle(ActionEvent event) {
-          mostrarCapitulo(botao.getEscolha().getProximo());
+          if(botao.getEscolha().getProximo() instanceof CapituloImagem) {
+            mostrarCapitulo((CapituloImagem)(botao.getEscolha().getProximo()));
+          }
+          else if (botao.getEscolha().getProximo() instanceof Capitulo) {
+            mostrarCapitulo(botao.getEscolha().getProximo());
+          }
         }
       });
 
